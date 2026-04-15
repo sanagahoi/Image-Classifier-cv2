@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Classification</title>
+    <link rel="stylesheet" href="app.css" />
+</head>
+<body>
+    <div class="app-shell">
+        <header>
+            <h1>Image Classification</h1>
+            <p>Upload a face image and get the predicted person from the trained model.</p>
+        </header>
+
+        <main>
+            <section class="upload-panel">
+                <label class="file-input-label" for="imageInput">
+                    <span>Select an image</span>
+                    <input id="imageInput" type="file" accept="image/*" />
+                </label>
+                <div class="preview-card">
+                    <img id="previewImage" src="" alt="Image preview" />
+                    <p id="previewHint">Choose an image to preview here.</p>
+                </div>
+                <button id="classifyBtn" class="primary-btn" disabled>Classify Image</button>
+            </section>
+
+            <section class="result-panel">
+                <div class="result-card">
+                    <h2>Classification Result</h2>
+                    <div id="statusMessage" class="status">No image selected.</div>
+                    <div id="resultDetails" class="details"></div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
